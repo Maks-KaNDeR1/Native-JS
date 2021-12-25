@@ -53,3 +53,27 @@ console.log(students.map(s => {
 
 console.log(students.map(s => s.name === 'Sega' ? { ...s, scores: s.scores + 10 } : s))
 
+const ourFilter = (array, callback) => {
+    const newArray = []
+    for (let i = 0; i < array.length; i++) {
+       if(callback(array[i])) {
+        newArray.push()
+       }
+    }
+    return newArray
+}
+
+console.log(students.filter(s => s.scores >= 100 ))
+console.log(ourFilter(students, s => s.scores >= 100 ))
+
+const ourFind = (array, callback) => {
+    const newArray = []
+    for (let i = 0; i < array.length; i++) {
+       if(callback(array[i])) {
+        return array[i]
+       }
+    }
+}
+
+console.log(students.find(s => s.name >= 'Sega' ))
+console.log(ourFind(students, s => s.name >= 'Sega' ))
